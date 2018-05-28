@@ -8,4 +8,4 @@ Orip is recorder　of numerical value with datetime.
  * View line chart. Vertical axis is opted unit. Horizontal axis is only datetime.
 
 # Usecase example
- * Recording grip strength　for both hands.
+ * Recording grip strength for both hands.
