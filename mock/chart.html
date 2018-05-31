@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://bulma.io/css/bulma-docs.min.css?v=201805251848">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+
+    <title>orip | chart | orip</title>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="myChart"></canvas>
+    </div>
+</body>
+
+<script>
+    var ctx = document.getElementById("myChart");
+    var myChart = new Chart(ctx, {
+
+        type: 'line',
+        data: {
+            datasets: [{
+                label: '右手',
+                fill: false,
+                data: [{
+                    x: moment("2010-10-22 4:30", "YYYY-MM-DD HH:mm"),
+                    y: 20
+                }, {
+                    x: moment("2010-10-26 4:30", "YYYY-MM-DD HH:mm"),
+                    y: 10
+                }, {
+                    x: moment("2010-10-28 4:30", "YYYY-MM-DD HH:mm"),
+                    y: 30
+                }, {
+                    x: moment("2010-11-20 2:20", "YYYY-MM-DD HH:mm"),
+                    y: 23
+                }],
+                backgroundColor: [
+                    'rgba(0, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(0, 159, 64, 1)'
+                ],
+                borderWidth: 4
+            },
+            {
+                label: '左手',
+                fill: false,
+                data: [{
+                    x: moment("2010-10-26 4:30", "YYYY-MM-DD HH:mm"),
+                    y: 10
+                }, {
+                    x: moment("2010-10-26 4:40", "YYYY-MM-DD HH:mm"),
+                    y: 12
+                }, {
+                    x: moment("2010-10-28 4:30", "YYYY-MM-DD HH:mm"),
+                    y: 13
+                }, {
+                    x: moment("2010-11-20 2:20", "YYYY-MM-DD HH:mm"),
+                    y: 18
+                }],
+                backgroundColor: [
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 4
+            }]
+        },
+        options: {
+            scales: {
+                xAxes: [{
+                    type: 'time',
+                    display: true,
+                    scaleLabel: {
+                        display: true,
+                        labelString: 'Date'
+                    },
+
+                }],
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            },
+
+        }
+    });
+</script>
+
+</html>
