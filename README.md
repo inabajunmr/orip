@@ -1,5 +1,5 @@
 # orip[WIP]
-Orip is recorder　of numerical value with datetime.
+Orip is recorder of numerical value with datetime.
 
 # Purpose
  * User can record value with datetime.
