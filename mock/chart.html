@@ -13,11 +13,22 @@
 </head>
 
 <body>
-    <div class="container">
-        <canvas id="myChart"></canvas>
+    <div class="modal is-active">
+        <div class="modal-background"></div>
+        <div class="modal-card" style="width: 800px">
+            <header class="modal-card-head">
+                <p class="modal-card-title">New orip</p>
+                <button class="delete" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+                <canvas id="myChart"></canvas>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-info">Tweet your latest data!</button>
+            </footer>
+        </div>
     </div>
 </body>
-
 <script>
     var ctx = document.getElementById("myChart");
     var myChart = new Chart(ctx, {
